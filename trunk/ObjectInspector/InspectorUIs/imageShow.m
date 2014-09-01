@@ -97,7 +97,7 @@ classdef imageShow < handle
             obj = imageShow(    'ImageName',    'Z:\projects\IQ_tuning_data\sensors\Sony\imx175\Grass_Images\imx175_Macbeth_Shadow_IMG_20140513_153612.jpg', ...
                                 'XmlName',      'Z:\projects\IQ_tuning_data\sensors\Sony\imx175\Grass_Images\imx175_Macbeth_Shadow_IMG_20140513_153612.xml');
             %%                
-            obj = imageShow(    'ImageName',    'Z:\projects\IQ_tuning_data\sensors\Sony\imx175\Grass_Images\imx175_Macbeth_Shadow_IMG_20140513_153612.jpg');
+            obj = imageShow(    'ImageName',    'C:\Users\bryan taylor\OneDrive\Photos\South Korea Sept\IMG001.jpg');
             
             %% Use Samsung Metric
             files = 'Z:\projects\IQ_tuning_data\sensors\Sony\imx175\Grass_Images\imx175_Cloudy_IMG_20140513_170349.jpg';
@@ -265,15 +265,13 @@ classdef imageShow < handle
                 end
                 figureName =  ['image Show - ',ImageName];  
             end
-            obj.handles.figure = figure(    'Name',         figureName, ...
+            obj.handles.figure = Figure;
+            set(obj.handles.figure,         'Name',         figureName, ...
                                             'NumberTitle',  'off', ...
                                             'MenuBar',      'none', ...
                                             'DeleteFcn',    @obj.DeleteFig, ...
                                             'KeyPressFcn',  @obj.KeyPressFcn, ...
                                             'Visible',      'off');
-            
-            
-            
             try
                 parent = obj.AddToolBar(ImageName);
             catch
