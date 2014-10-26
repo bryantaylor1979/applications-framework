@@ -79,7 +79,7 @@ classdef uiDataSetTable < handle
                         'Pick a file');                
             end
             %%        
-            [~,~,ext] = fileparts(filename);
+            [dummy,dummy,ext] = fileparts(filename);
             datasetObj = DataSetFiltering2;
             file = fullfile(pathname,filename);
             
