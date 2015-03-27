@@ -1,0 +1,1 @@
+For IQ and stocks and shares
